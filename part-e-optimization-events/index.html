@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="QuickCart JavaScript optimization and DOM event demonstrations." />
+    <title>QuickCart | JavaScript Optimization & DOM Events</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <a class="brand" href="#top" aria-label="QuickCart home">Quick<span>Cart</span></a>
+        <span class="header-label">Advanced JavaScript Practical</span>
+      </div>
+    </header>
+
+    <main id="top" class="container page-content">
+      <section class="intro">
+        <p class="eyebrow">PART E · 20 MARKS</p>
+        <h1>Performance Optimization & DOM Events</h1>
+        <p>Explore debouncing, throttling, memoization, event bubbling and event delegation.</p>
+      </section>
+
+      <section class="panel" aria-labelledby="search-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">TASK 1 · DEBOUNCING</p>
+            <h2 id="search-heading">Find a product</h2>
+          </div>
+          <span class="timing-tag">500 ms delay</span>
+        </div>
+        <label for="product-search">Search products</label>
+        <input id="product-search" type="search" placeholder="Start typing a product name..." autocomplete="off" />
+        <p id="search-status" class="status" aria-live="polite">Search runs after you stop typing for 500 ms.</p>
+      </section>
+
+      <section class="panel" aria-labelledby="products-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">TASK 4 · EVENT DELEGATION</p>
+            <h2 id="products-heading">Shopping cart products</h2>
+          </div>
+          <span class="timing-tag">One parent listener</span>
+        </div>
+        <p class="helper-text">Use a Remove button. The parent list handles clicks through event delegation.</p>
+        <ul id="product-list" class="product-list">
+          <li class="product-row" data-product-name="Laptop"><div><strong>Laptop</strong><span>₹50,000</span></div><button class="remove-button" type="button" data-action="remove">Remove</button></li>
+          <li class="product-row" data-product-name="Mouse"><div><strong>Mouse</strong><span>₹800</span></div><button class="remove-button" type="button" data-action="remove">Remove</button></li>
+          <li class="product-row" data-product-name="Keyboard"><div><strong>Keyboard</strong><span>₹1,500</span></div><button class="remove-button" type="button" data-action="remove">Remove</button></li>
+        </ul>
+        <p id="cart-status" class="status" aria-live="polite">3 products in the list.</p>
+      </section>
+
+      <section class="panel" aria-labelledby="events-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">TASK 4 · EVENT BUBBLING</p>
+            <h2 id="events-heading">Bubbling demonstration</h2>
+          </div>
+        </div>
+        <p class="helper-text">Click each button and observe whether the parent handler runs.</p>
+        <div id="bubble-parent" class="bubble-parent">
+          <p><strong>Parent container</strong> — click a button below.</p>
+          <div class="button-row">
+            <button id="allow-bubbling" class="secondary-button" type="button">Allow bubbling</button>
+            <button id="stop-bubbling" class="secondary-button" type="button">Stop propagation</button>
+          </div>
+        </div>
+        <p id="bubble-status" class="status" aria-live="polite">No event received yet.</p>
+      </section>
+
+      <section class="panel" aria-labelledby="performance-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">TASKS 2 & 3 · THROTTLING + MEMOIZATION</p>
+            <h2 id="performance-heading">Performance demonstrations</h2>
+          </div>
+        </div>
+        <p class="helper-text">Scroll this page: the scroll handler is throttled to run at most once per 1000 ms.</p>
+        <p id="scroll-status" class="status" aria-live="polite">Scroll events handled: 0</p>
+        <div class="button-row">
+          <button id="calculate-discount" class="primary-button" type="button">Calculate 10% discount</button>
+          <button id="calculate-discount-again" class="secondary-button" type="button">Calculate same discount again</button>
+        </div>
+        <p id="memo-status" class="status" aria-live="polite">Discount calculation has not run yet.</p>
+      </section>
+
+      <section class="explanation">
+        <h2>What to observe</h2>
+        <ul>
+          <li><strong>Debouncing:</strong> search waits until typing pauses for 500 ms.</li>
+          <li><strong>Throttling:</strong> scroll handling runs no more than once in each 1000 ms interval.</li>
+          <li><strong>Memoization:</strong> repeated arguments reuse a cached discount result.</li>
+          <li><strong>Event bubbling:</strong> a child click can travel to its parent unless propagation is stopped.</li>
+          <li><strong>Event delegation:</strong> the product list's parent handles Remove clicks for its child items.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="container">QuickCart · Advanced JavaScript Practical Assignment</div></footer>
+  </body>
+</html>

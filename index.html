@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="QuickCart - Advanced JavaScript practical assignment demonstrating modern JavaScript concepts."
+    />
+    <title>QuickCart | Advanced JavaScript Project</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: #080b14;
+        color: #f1f5f9;
+        line-height: 1.6;
+      }
+
+      header {
+        padding: 22px 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #20283a;
+      }
+
+      .logo {
+        font-size: 25px;
+        font-weight: bold;
+        color: #38bdf8;
+      }
+
+      header span {
+        color: #94a3b8;
+        font-size: 14px;
+      }
+
+      .hero {
+        text-align: center;
+        padding: 100px 20px 75px;
+        background: linear-gradient(135deg, #101a30, #080b14);
+      }
+
+      .tag {
+        display: inline-block;
+        color: #38bdf8;
+        border: 1px solid #256080;
+        border-radius: 20px;
+        padding: 6px 15px;
+        font-size: 13px;
+        margin-bottom: 22px;
+      }
+
+      h1 {
+        font-size: clamp(38px, 6vw, 65px);
+        margin-bottom: 18px;
+      }
+
+      h1 span {
+        color: #38bdf8;
+      }
+
+      .hero p {
+        max-width: 680px;
+        margin: 0 auto 30px;
+        color: #aab6ca;
+        font-size: 17px;
+      }
+
+      .button {
+        display: inline-block;
+        background: #38bdf8;
+        color: #08111e;
+        text-decoration: none;
+        padding: 13px 25px;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: 0.2s;
+      }
+
+      .button:hover {
+        background: #7dd3fc;
+        transform: translateY(-2px);
+      }
+
+      .secondary {
+        background: transparent;
+        border: 1px solid #475569;
+        color: #f1f5f9;
+        margin-left: 10px;
+      }
+
+      .secondary:hover {
+        background: #1e293b;
+        color: white;
+      }
+
+      .container {
+        width: 84%;
+        max-width: 1100px;
+        margin: auto;
+        padding: 65px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 12px;
+      }
+
+      .section-description {
+        text-align: center;
+        color: #94a3b8;
+        margin-bottom: 35px;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+      }
+
+      .card {
+        background: #101625;
+        border: 1px solid #263249;
+        border-radius: 12px;
+        padding: 25px;
+      }
+
+      .card h3 {
+        color: #38bdf8;
+        margin-bottom: 10px;
+      }
+
+      .card p {
+        color: #aab6ca;
+        font-size: 14px;
+      }
+
+      .technology {
+        text-align: center;
+        background: #101625;
+        border-top: 1px solid #263249;
+        border-bottom: 1px solid #263249;
+        padding: 45px 20px;
+      }
+
+      .technology p {
+        color: #aab6ca;
+        margin-top: 12px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 25px;
+        color: #94a3b8;
+        font-size: 13px;
+      }
+
+      @media (max-width: 600px) {
+        header {
+          padding: 18px 5%;
+        }
+
+        header span {
+          font-size: 11px;
+        }
+
+        .hero {
+          padding-top: 75px;
+        }
+
+        .container {
+          width: 90%;
+        }
+
+        .secondary {
+          margin: 12px 0 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">QuickCart.</div>
+      <span>Advanced JavaScript Practical Assignment</span>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="tag">MODERN JAVASCRIPT PROJECT</div>
+
+        <h1>Explore <span>QuickCart</span></h1>
+
+        <p>
+          A practical JavaScript project demonstrating modern JavaScript
+          concepts through six structured learning modules, from object-oriented
+          programming to integrated application development.
+        </p>
+
+        <a href="./part-e-optimization-events/" class="button">
+          Explore Live Application
+        </a>
+
+        <a
+          href="https://github.com/rahulgopanaboyina/QuickCart"
+          class="button secondary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View GitHub Repository
+        </a>
+      </section>
+
+      <section class="container">
+        <h2 class="section-title">Project Modules</h2>
+
+        <p class="section-description">
+          Six parts covering the key requirements of the assignment.
+        </p>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Part A – Objects & Classes</h3>
+            <p>
+              Constructors, prototypes, ES6 classes, inheritance and modern
+              JavaScript syntax.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Part B – Array Methods</h3>
+            <p>Map, filter, reduce, forEach, Map, Set, freeze and seal.</p>
+          </div>
+
+          <div class="card">
+            <h3>Part C – JSON Debugging</h3>
+            <p>JSON serialization, parsing and handling common JSON errors.</p>
+          </div>
+
+          <div class="card">
+            <h3>Part D – Asynchronous JavaScript</h3>
+            <p>Callbacks, promises, async/await and Promise methods.</p>
+          </div>
+
+          <div class="card">
+            <h3>Part E – Optimization & Events</h3>
+            <p>Debouncing, throttling, memoization and DOM event handling.</p>
+          </div>
+
+          <div class="card">
+            <h3>Part F – Integration</h3>
+            <p>
+              Combining JavaScript concepts into an integrated QuickCart
+              application.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="technology">
+        <h2>Technology Used</h2>
+        <p>HTML5 &nbsp; | &nbsp; CSS3 &nbsp; | &nbsp; JavaScript (ES6+)</p>
+        <p>No external frameworks or libraries.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>QuickCart – Advanced JavaScript Practical Assignment</p>
+      <p>Developed as a learning and practical implementation project.</p>
+    </footer>
+  </body>
+</html>

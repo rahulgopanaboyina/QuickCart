@@ -1,5 +1,9 @@
 # QuickCart – Advanced JavaScript Practical Assignment
 
+## Live Demo
+
+[View QuickCart Live](https://rahulgopanaboyina.github.io/QuickCart/)
+
 A six-part implementation of the **Advanced JavaScript Practical Assignment** (November 2026). The project demonstrates modern JavaScript (ES6+) through product objects and classes, shopping-cart calculations, JSON handling, asynchronous order processing, browser performance patterns and DOM events, and a final integrated order summary.
 
 ## Technologies
